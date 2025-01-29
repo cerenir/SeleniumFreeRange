@@ -9,6 +9,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -29,7 +30,8 @@ public class BasePage {
      * WebDriverWait se usa para poner esperas explícitas en los elementos web
      */
     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
- 
+    
+    private static Actions action;
     /*
      * Configura el WebDriver para Chrome usando WebDriverManager.
      * WebDriverManager va a estar descargando y configurando automáticamente el
@@ -66,6 +68,8 @@ public class BasePage {
  
     // Encuentra y devuelve un WebElement en la página utilizando un locator XPath,
     // esperando a que esté presentente en el DOM
+    //si el elemento está visible, continua, si no lo está, espera X segundos (definidos en el wait) y si apareció, sigue
+    // si no, tira excepción
     private WebElement Find(String locator) {
         return wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(locator)));
     }
@@ -102,7 +106,21 @@ public class BasePage {
         List<WebElement> dropdownOptions = dropdown.getOptions();
         return dropdownOptions.size();
     }
- 
+    //situar el ratón sobre un elemento para marcarlo
+    public void hoverOverElement(String locator){
+        action.moveToElement(Find(locator));
+    }
+    //hacer doble click
+    public void doubleClick(String locator){
+        action.doubleClick(Find(locator));
+    }
+
+    //hacer right click
+    public void rightClick(String locator){
+        action.contextClick(Find(locator));
+    }
+
+    //obtener los valores de un dropdown
     public List<String> getDropdownValues(String locator) {
         Select dropdown = new Select(Find(locator));
  
@@ -115,5 +133,16 @@ public class BasePage {
         return values;
  
     }
- 
+
+    public void switchToiFrame(int iFrameIndex){
+        driver.switchTo().frame(iFrameIndex);
+    }
+
+    public void switchToParentFrame(){
+        driver.switchTo().parentFrame();
+    }
+    //cierra una alerta que no nos interesa
+    public void dismissAlert(){
+        driver.switchTo().alert().dismiss();
+    } 
 }
