@@ -14,5 +14,6 @@ Scenario: Users can add product to cart
 
 Examples:
         |Product    |
-        |patatas    |
+        |Switch     |
         |Airpods    |
+        |Alexa      |

@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.ArrayList;
  
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -63,7 +64,8 @@ public class BasePage {
     }
     //elige el indice que le pasamos de la página y hace clic
     public void goToLinkText(String linkText){
-        driver.findElement(By.linkText(linkText)).click();
+        //driver.findElement(By.linkText(linkText)).click();
+        Find(linkText).click();
     }
  
     // Encuentra y devuelve un WebElement en la página utilizando un locator XPath,
@@ -129,20 +131,37 @@ public class BasePage {
         for (WebElement option : dropdownOptions) {
             values.add(option.getText());
         }
- 
         return values;
- 
+    }
+
+/*METODOS QUE COMPRUEBAN PROPIEDADES DE UN ELEMENTO, SI ESTÁ PRESENTE, HABILITADO, SELECCIONADO ETC*/ 
+
+    public boolean elementEnabled(String locator){
+        return Find(locator).isEnabled();
+    }
+
+    public boolean elementIsDisplayed(String locator){
+        return Find(locator).isDisplayed();
+    }
+
+    public boolean elementIsSelected(String locator){
+        return Find(locator).isSelected();
     }
 
     public void switchToiFrame(int iFrameIndex){
         driver.switchTo().frame(iFrameIndex);
     }
-
+    /*-------------*/
     public void switchToParentFrame(){
         driver.switchTo().parentFrame();
     }
     //cierra una alerta que no nos interesa
     public void dismissAlert(){
-        driver.switchTo().alert().dismiss();
+        try{
+            driver.switchTo().alert().dismiss();
+        }catch(NoAlertPresentException e){
+            System.out.println("La alerta no está presente");
+            e.printStackTrace();
+        }
     } 
 }

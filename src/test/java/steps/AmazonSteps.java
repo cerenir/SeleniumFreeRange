@@ -26,14 +26,12 @@ public class AmazonSteps {
     }
     @And("selects the third item")
     public void selectItem(){
-        paginaAmazon.addItemToCart();
+        paginaAmazon.selectItem();
     }
     @Then("the user is able to add it to the cart")
     public void checkItemAddItemToCart(){
         paginaAmazon.addItemToCart();
+        paginaAmazon.cancelInsurance();
         Assert.assertEquals("Agregado al carrito", paginaAmazon.addedToCartMessage());
     }
-
-    
-    
 }
