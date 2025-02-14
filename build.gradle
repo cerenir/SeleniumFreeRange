@@ -13,6 +13,7 @@ plugins {
 repositories {
     // Use Maven Central for resolving dependencies.
     mavenCentral()
+    maven { url 'https://jitpack.io' }
 }
 
 dependencies {
@@ -30,6 +31,7 @@ dependencies {
     implementation 'io.cucumber:cucumber-java:7.20.1'
     testImplementation 'io.cucumber:cucumber-junit:7.20.1'
     implementation 'com.ibm.icu:icu4j:73.2'
+    implementation 'tech.grasshopper:extentreports-cucumber7-adapter:1.12.0'
     // WebDriverManager for managing browser drivers
     implementation 'io.github.bonigarcia:webdrivermanager:5.9.2'
 }

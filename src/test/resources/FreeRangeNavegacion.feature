@@ -1,8 +1,7 @@
 @Navigation
 Feature: Navigation
-    To see the subpages
-    Without logging in
-    I can click the navigation bar links
+    
+Rule: To see the subpages Without logging in I can click the navigation bar links
  
     Background: I am on the Free Range Testers web without logging in.
         Given I navigate to www.freerangetesters.com
