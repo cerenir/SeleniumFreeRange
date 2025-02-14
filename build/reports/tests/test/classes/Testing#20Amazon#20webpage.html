@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class Testing Amazon webpage</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class Testing Amazon webpage</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/default-package.html">default-package</a> &gt; Testing Amazon webpage</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">2</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">2</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">3.757s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox failures" id="successRate">
+<div class="percent">0%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Tests</a>
+</li>
+<li>
+<a href="#tab2">Standard output</a>
+</li>
+<li>
+<a href="#tab3">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="Users can add product to cart #1"></a>
+<h3 class="failures">Users can add product to cart #1</h3>
+<span class="code">
+<pre>org.openqa.selenium.InvalidArgumentException: invalid argument
+  (Session info: chrome=131.0.6778.265)
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '14.6.1', java.version: '19.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d7825311c57e7bf657217ce500014d20, get {url=www.amazon.es}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.265, chrome: {chromedriverVersion: 131.0.6778.264 (2d05e315153..., userDataDir: /var/folders/8p/3x2nzww56sl...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64966}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:64966/devtoo..., se:cdpVersion: 131.0.6778.265, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d7825311c57e7bf657217ce500014d20
+	at java.base@19.0.2/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base@19.0.2/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base@19.0.2/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at app//org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:313)
+	at app//pages.BasePage.navigateTo(BasePage.java:55)
+	at app//pages.AmazonMainPage.navigateToAmazon(AmazonMainPage.java:14)
+	at app//steps.AmazonSteps.navigateToAmazonPage(AmazonSteps.java:15)
+	at ✽.the user navigates to www.amazon.com(file:///Users/carlosrius/Documents/Cursos/Udemy/SeleniumUdemy/SeleniumFreeRange/src/test/resources/TestingAmazon.feature:9)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="Users can add product to cart #2"></a>
+<h3 class="failures">Users can add product to cart #2</h3>
+<span class="code">
+<pre>org.openqa.selenium.InvalidArgumentException: invalid argument
+  (Session info: chrome=131.0.6778.265)
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '14.6.1', java.version: '19.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d7825311c57e7bf657217ce500014d20, get {url=www.amazon.es}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.265, chrome: {chromedriverVersion: 131.0.6778.264 (2d05e315153..., userDataDir: /var/folders/8p/3x2nzww56sl...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64966}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:64966/devtoo..., se:cdpVersion: 131.0.6778.265, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d7825311c57e7bf657217ce500014d20
+	at java.base@19.0.2/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base@19.0.2/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base@19.0.2/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at app//org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:313)
+	at app//pages.BasePage.navigateTo(BasePage.java:55)
+	at app//pages.AmazonMainPage.navigateToAmazon(AmazonMainPage.java:14)
+	at app//steps.AmazonSteps.navigateToAmazonPage(AmazonSteps.java:15)
+	at ✽.the user navigates to www.amazon.com(file:///Users/carlosrius/Documents/Cursos/Udemy/SeleniumUdemy/SeleniumFreeRange/src/test/resources/TestingAmazon.feature:9)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="failures">Users can add product to cart #1</td>
+<td class="failures">3.465s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">Users can add product to cart #2</td>
+<td class="failures">0.292s</td>
+<td class="failures">failed</td>
+</tr>
+</table>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>
+@Amazon @Plans
+Scenario: Users can add product to cart       ?[90m# src/test/resources/TestingAmazon.feature:17?[0m
+  ?[31mGiven ?[0m?[31mthe user navigates to www.amazon.com?[0m  ?[90m# steps.AmazonSteps.navigateToAmazonPage()?[0m
+      ?[31morg.openqa.selenium.InvalidArgumentException: invalid argument
+  (Session info: chrome=131.0.6778.265)
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '14.6.1', java.version: '19.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d7825311c57e7bf657217ce500014d20, get {url=www.amazon.es}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.265, chrome: {chromedriverVersion: 131.0.6778.264 (2d05e315153..., userDataDir: /var/folders/8p/3x2nzww56sl...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64966}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:64966/devtoo..., se:cdpVersion: 131.0.6778.265, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d7825311c57e7bf657217ce500014d20
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:313)
+	at pages.BasePage.navigateTo(BasePage.java:55)
+	at pages.AmazonMainPage.navigateToAmazon(AmazonMainPage.java:14)
+	at steps.AmazonSteps.navigateToAmazonPage(AmazonSteps.java:15)
+	at ✽.the user navigates to www.amazon.com(file:///Users/carlosrius/Documents/Cursos/Udemy/SeleniumUdemy/SeleniumFreeRange/src/test/resources/TestingAmazon.feature:9)
+?[0m
+  ?[36mWhen ?[0m?[36mthe user searches for ?[0m?[36m?[1mPlaystation?[0m      ?[90m# steps.AmazonSteps.searchForWord(java.lang.String)?[0m
+  ?[36mAnd ?[0m?[36mnavigates to second page?[0m                ?[90m# steps.AmazonSteps.navigateToSecondPage()?[0m
+  ?[36mAnd ?[0m?[36mselects the third item?[0m                  ?[90m# steps.AmazonSteps.selectItem()?[0m
+  ?[36mThen ?[0m?[36mthe user is able to add it to the cart?[0m ?[90m# steps.AmazonSteps.addItemToCart()?[0m
+
+    el escenario ha fallado, revisa el reporte.
+
+
+    Embedding screenshot of the error [image/png 15875 bytes]
+
+
+@Amazon @Plans
+Scenario: Users can add product to cart       ?[90m# src/test/resources/TestingAmazon.feature:18?[0m
+  ?[31mGiven ?[0m?[31mthe user navigates to www.amazon.com?[0m  ?[90m# steps.AmazonSteps.navigateToAmazonPage()?[0m
+      ?[31morg.openqa.selenium.InvalidArgumentException: invalid argument
+  (Session info: chrome=131.0.6778.265)
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '14.6.1', java.version: '19.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d7825311c57e7bf657217ce500014d20, get {url=www.amazon.es}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.265, chrome: {chromedriverVersion: 131.0.6778.264 (2d05e315153..., userDataDir: /var/folders/8p/3x2nzww56sl...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64966}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:64966/devtoo..., se:cdpVersion: 131.0.6778.265, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d7825311c57e7bf657217ce500014d20
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:313)
+	at pages.BasePage.navigateTo(BasePage.java:55)
+	at pages.AmazonMainPage.navigateToAmazon(AmazonMainPage.java:14)
+	at steps.AmazonSteps.navigateToAmazonPage(AmazonSteps.java:15)
+	at ✽.the user navigates to www.amazon.com(file:///Users/carlosrius/Documents/Cursos/Udemy/SeleniumUdemy/SeleniumFreeRange/src/test/resources/TestingAmazon.feature:9)
+?[0m
+  ?[36mWhen ?[0m?[36mthe user searches for ?[0m?[36m?[1mAirpods?[0m          ?[90m# steps.AmazonSteps.searchForWord(java.lang.String)?[0m
+  ?[36mAnd ?[0m?[36mnavigates to second page?[0m                ?[90m# steps.AmazonSteps.navigateToSecondPage()?[0m
+  ?[36mAnd ?[0m?[36mselects the third item?[0m                  ?[90m# steps.AmazonSteps.selectItem()?[0m
+  ?[36mThen ?[0m?[36mthe user is able to add it to the cart?[0m ?[90m# steps.AmazonSteps.addItemToCart()?[0m
+
+    el escenario ha fallado, revisa el reporte.
+
+
+    Embedding screenshot of the error [image/png 15875 bytes]
+
+</pre>
+</span>
+</div>
+<div id="tab3" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>SLF4J(W): No SLF4J providers were found.
+SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.4</a> at 24 ene 2025, 14:45:44</p>
+</div>
+</div>
+</body>
+</html>
